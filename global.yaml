@@ -1,2 +1,6 @@
 domain: "courtcircuits.lab"
 source: "https://github.com/Courtcircuits/gaze.git"
+
+namespaces:
+  - observability
+  - platform

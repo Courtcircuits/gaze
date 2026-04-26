@@ -1,7 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: platform-appofapps
+  name: namespaces
+  namespace: platform
 spec:
   project: platform
   sources:
@@ -9,7 +10,7 @@ spec:
       targetRevision: HEAD
       ref: values
     - repoURL: "{{ .Values.source }}"
-      path: cluster
+      path: cluster/namespaces
       targetRevision: HEAD
       helm:
         valueFiles:

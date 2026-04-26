@@ -5,5 +5,5 @@
 ```bash
 cd platform
 helm dependency build
-helm install gaze-platform --values ./values.yaml . --namespace platform --create-namespace
+helm install gaze-platform -f ./values.yaml -f ../global.yaml . --namespace platform --create-namespace
 ```
