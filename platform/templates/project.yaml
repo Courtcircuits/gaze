@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: platform
+spec:
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  description: Project containing all applications used by the cluster
+  destinations:
+    - namespace: "*"
+      server: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  orphanedResources:
+    warn: true
+  sourceRepos:
+    - "*"
